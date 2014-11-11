@@ -24,7 +24,45 @@
   <!-- Application Binary Interface - https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />  
   <!-- Recovery system -->
-  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />  
+  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
+  <!-- binary diff and patch ttp://www.daemonology.net/bsdiff/ -->
+  <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
+  <!-- bzip2 compression pression library -->
+  <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
+  <!-- Portable non-linear least squares solver https://code.google.com/p/ceres-solver/ -->
+  <project path="external/ceres-solver" name="platform/external/ceres-solver" groups="pdk-cw-fs" />
+  <!-- SE Linux policy checking program -->
+  <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />    
+  <!-- CLAT handles the translation of ipv4 to ipv6 for applications that do not support dns64. http://dan.drown.org/android/clat/ -->
+  <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs" />
+  <!-- Subset of Ant 1.83 related to matching glob patterns to paths -->
+  <project path="external/ant-glob" name="platform/external/ant-glob" groups="pdk-cw-fs" />
+  <!-- ANother Tool for Language Recognition http://www.antlr3.org/ -->
+  <project path="external/antlr" name="platform/external/antlr" groups="pdk-cw-fs,tradefed" />
+  <!-- XML parser -->
+  <project path="external/apache-xml" name="platform/external/apache-xml" groups="pdk-cw-fs" />
+  <!-- GNU Bison parser generator -->
+  <project path="external/bison" name="platform/external/bison" groups="pdk" />  
+
+
+  <!--Android OS libraries -->
+  <!-- Encyption library http://en.wikipedia.org/wiki/Bouncy_Castle_%28cryptography%29 -->
+  <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" />
+  <!-- Bluetooth stack https://source.android.com/devices/bluetooth.html -->
+  <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" /> 
+    <!-- Block IO Tracing -->
+  <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs" />
+  <!-- org.android.http Java class for HTTP components -->
+  <project path="external/apache-http" name="platform/external/apache-http" groups="pdk-cw-fs" />
+  <!-- EXT2/EXT3/EXT4 file system tools  -->
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" groups="pdk" />
+  <!-- F2FS file system tools -->
+  <project path="external/f2fs-tools" name="platform/external/f2fs-tools" groups="pdk" />
+
+
+  <!-- Media libraries-->
+  <!-- MPEG Advanced Audio Coding Libs -->
+  <project path="external/aac" name="platform/external/aac" groups="pdk" />  
   
   
   <!-- Devices -->
@@ -76,6 +114,7 @@
   <!-- Arduino devboard -->
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
+  <project path="external/arduino" name="platform/external/arduino" groups="pdk-cw-fs" />
   <!-- Emulated devices -->
   <project path="device/generic/goldfish" name="device/generic/goldfish" groups="pdk" />
   <project path="device/generic/qemu" name="device/generic/qemu" />
@@ -117,4 +156,8 @@
   <project path="developers/docs" name="platform/developers/docs" />
   <!-- Process VM replaced by ART in Lollipop. http://en.wikipedia.org/wiki/Dalvik_%28software%29 -->
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs" />
+    <!-- An open source, free Java implementation. Deprecated after Java 1.6-->
+  <project path="external/apache-harmony" name="platform/external/apache-harmony" groups="pdk-cw-fs" />
+  <!-- Placeholder -->
+  <project path="external/apache-qp" name="platform/external/apache-qp" groups="pdk-cw-fs" />  
 </manifest>

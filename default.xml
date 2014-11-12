@@ -42,19 +42,29 @@
   <project path="external/antlr" name="platform/external/antlr" groups="pdk-cw-fs,tradefed" />
   <!-- Java library for parsing XML -->
   <project path="external/apache-xml" name="platform/external/apache-xml" groups="pdk-cw-fs" />
+  <!-- Java XML writer -->
+  <project path="external/xmlwriter" name="platform/external/xmlwriter" groups="pdk-cw-fs" />  
   <!-- C library for parsing XML -->
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <!-- C language XML toolkit from the GNOME project -->
-  <project path="external/libxml2" name="platform/external/libxml2" groups="pdk-cw-fs" />    
+  <project path="external/libxml2" name="platform/external/libxml2" groups="pdk-cw-fs" />   
+  <!-- a simple, small, C++ XML parser  --> 
+  <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" />
+  <!--XML parse needed by Bluedroid stack -->
+  <project path="external/tinyxml2" name="platform/external/tinyxml2" groups="pdk" />     
   <!-- JSON parser in C - https://bitbucket.org/zserge/jsmn/wiki/Home-->
   <project path="external/jsmn" name="platform/external/jsmn" groups="pdk" />
   <!-- A simple C++ API to manipulate JSON values -->
   <project path="external/jsoncpp" name="platform/external/jsoncpp" groups="pdk-cw-fs" />
+  <!-- SAX-compliant parser  -->
+  <project path="external/tagsoup" name="platform/external/tagsoup" groups="pdk-cw-fs,tradefed" />  
   <!-- SOAP serialization and transport -->
-  <project path="external/ksoap2" name="platform/external/ksoap2" groups="pdk-cw-fs" />    
-  <!-- GNU Bison parser generator -->
+  <project path="external/ksoap2" name="platform/external/ksoap2" groups="pdk-cw-fs" />  
+  <!-- Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data- https://developers.google.com/protocol-buffers/-->
+  <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" />    
+  <!-- GNU Bison parser generator -->  
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
-   <!-- a compiler front-end for the C family of languages (C, C++, Objective-C, and Objective-C++) which is built as part of the LLVM compiler infrastructure project. -->
+  <!-- a compiler front-end for the C family of languages (C, C++, Objective-C, and Objective-C++) which is built as part of the LLVM compiler infrastructure project. -->
   <project path="external/clang" name="platform/external/clang" groups="pdk" />
   <!-- Replacement library for libgcc. -->
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />  
@@ -81,7 +91,22 @@
   <!-- C programming interface (API) to determine the call-chain of a program - http://www.nongnu.org/libunwind/ -->
   <project path="external/libunwind" name="platform/external/libunwind" groups="pdk" />
   <!--  A collection of modular and reusable compiler and toolchain technologies. - http://llvm.org/ --> 
-  <project path="external/llvm" name="platform/external/llvm" groups="pdk" />    
+  <project path="external/llvm" name="platform/external/llvm" groups="pdk" /> 
+  <!--A plugin for Google Protobuf compiler that generates C code - http://koti.kapsi.fi/jpa/nanopb/ -->
+  <project path="external/nanopb-c" name="platform/external/nanopb-c" />
+  <!-- library which makes it easier to instantiate objects bypassing Java's standard constructor mechanism - http://objenesis.org/ -->
+  <project path="external/objenesis" name="platform/external/objenesis" groups="pdk-cw-fs" />
+  <!--Java class file shrinker, optimizer, obfuscator, and preverifier - http://proguard.sourceforge.net/ -->
+  <project path="external/proguard" name="platform/external/proguard" groups="pdk-java,tradefed" /> 
+  <!-- regular expression library - http://code.google.com/p/re2/ -->
+  <project path="external/regex-re2" name="platform/external/regex-re2" groups="pdk-cw-fs" />    
+  <!-- This library provides a collection of (macro-based) functions for performing safe integer operations across platform and architecture with a straightforward API. - https://code.google.com/p/safe-iop/ -->
+  <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />  
+  <!-- C++ Standard Template Library -->
+  <project path="external/stlport" name="platform/external/stlport" groups="pdk" />
+ <!-- VIXL: AArch64 Runtime Code Generation Library -  https://github.com/armvixl/vixl -->
+  <project path="external/vixl" name="platform/external/vixl" groups="pdk" />      
+       
        
 
   <!--************************* Android OS libraries and utilities *************************************-->
@@ -94,6 +119,8 @@
   <project path="external/fsck_msdos" name="platform/external/fsck_msdos" groups="pdk-cw-fs" />
   <!-- Generates an ext2 filesystem as a normal (non-root) user. -->
   <project path="external/genext2fs" name="platform/external/genext2fs" groups="pdk-cw-fs" />
+  <!-- Yet Another Flash File System library-->
+  <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />  
   <!-- Media Transfer Protocol library -->
   <project path="external/libmtp" name="platform/external/libmtp" groups="pdk-cw-fs" /> 
   
@@ -112,7 +139,7 @@
   <project path="external/ipsec-tools" name="platform/external/ipsec-tools" groups="pdk-cw-fs" />
   <!-- User space Linux firewall -->
   <project path="external/iptables" name="platform/external/iptables" groups="pdk-cw-fs" />
-  <!--  set of small useful utilities for Linux networking - http://www.skbuff.net/iputils/ -->
+  <!-- set of small useful utilities for Linux networking - http://www.skbuff.net/iputils/ -->
   <project path="external/iputils" name="platform/external/iputils" groups="pdk-cw-fs" /> 
   <!-- Java implementation of multi-cast DNS and can be used for service registration and discovery in local area networks. http://jmdns.sourceforge.net/ -->
   <project path="external/jmdns" name="platform/external/jmdns" groups="pdk-cw-fs" />
@@ -120,8 +147,24 @@
   <project path="external/mdnsresponder" name="platform/external/mdnsresponder" groups="pdk" />  
   <!-- Netlink Protocol Library Suite - http://www.infradead.org/~tgr/libnl/ -->
   <project path="external/libnl" name="platform/external/libnl" groups="pdk" /> 
+  <!-- a tool for network monitoring and data acquisition - http://www.tcpdump.org -->
+  <project path="external/tcpdump" name="platform/external/tcpdump" groups="pdk,pdk-cw-fs" />  
   <!-- Kernel packet capture - http://www.tcpdump.org/  -->
   <project path="external/libpcap" name="platform/external/libpcap" groups="pdk,pdk-cw-fs" />  
+  <!--Multiple Tunneling Protocol Daemon (mtpd) -->
+  <project path="external/mtpd" name="platform/external/mtpd" groups="pdk-cw-fs" />
+  <!--  A light-weight HTTP server designed for embedding in other applications -->
+  <project path="external/nanohttpd" name="platform/external/nanohttpd" />  
+  <!-- A computer networking service for reading from and writing to network connections using TCP or UDP. -->
+  <project path="external/netcat" name="platform/external/netcat" groups="pdk-cw-fs" />  
+  <!-- OpenSSL-->
+  <project path="external/openssl" name="platform/external/openssl" groups="pdk" />
+  <!-- Point-to-Point Protocol daemon -->
+  <project path="external/ppp" name="platform/external/ppp" groups="pdk-cw-fs" />
+  <!-- An Open Source XMPP Client Library written in Java for JVMs -->
+  <project path="external/smack" name="platform/external/smack" groups="pdk-cw-fs" /> 
+  <!-- WebRTC - http://www.webrtc.org/ -->
+  <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" /> 
    
   <!-- Security ->
   <!-- Encyption library http://en.wikipedia.org/wiki/Bouncy_Castle_%28cryptography%29 -->
@@ -130,16 +173,28 @@
   <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" /> 
   <!-- API for SELinux applications -->
   <project path="external/libselinux" name="platform/external/libselinux" groups="pdk" /> 
+  <!-- Addition SELinux policies -->
+  <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" />  
   <!-- an API for the manipulation of SELinux binary policies. -->   
   <project path="external/libsepol" name="platform/external/libsepol" groups="pdk" /> 
+  <!-- OAuth authorization-->
+  <project path="external/oauth" name="platform/external/oauth" groups="pdk-cw-fs" />
+  <!-- OWASP Java HTML Sanitizer -->
+  <project path="external/owasp/sanitizer" name="platform/external/owasp/sanitizer" />
+  <!-- scrypt key derivation function - https://code.google.com/p/scrypt/ --->
+  <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" /> 
+  <!-- Wifi encrpytion -->
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" /> 
   
   <!-- Genertic Devices -->
   <!-- Bluetooth stack https://source.android.com/devices/bluetooth.html -->
   <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
   <!-- ESound audio stream API -->
   <project path="external/esd" name="platform/external/esd" groups="pdk-cw-fs" />
-  <!--  Speech Enabled Eyes-Free Android Applications - https://code.google.com/p/eyes-free/ -->
-  <project path="external/eyes-free" name="platform/external/eyes-free" groups="pdk-cw-fs" />
+  <!-- a small library to interface with ALSA in the Linux kernel -->
+  <project path="external/tinyalsa" name="platform/external/tinyalsa" groups="pdk" />  
+  <!-- a userspace library for anyone who wants to use the ALSA compressed APIs introduced in Linux 3.3 -->
+  <project path="external/tinycompress" name="platform/external/tinycompress" groups="pdk" />  
   <!--Java library for handling console input. - http://jline.sourceforge.net/ -->
   <project path="external/jline" name="platform/external/jline" groups="notdefault,tradefed" />   
   <!--  Broadcom's BCM2079x and possibly other NCI-compliant NFC Device -->
@@ -151,18 +206,35 @@
   <project path="external/libusb-compat" name="platform/external/libusb-compat" groups="pdk-cw-fs" />
   <!-- Mesa 3-D graphics library -->
   <project path="external/mesa3d" name="platform/external/mesa3d" groups="pdk-cw-fs" />   
-  
+  <!--  Speech Enabled Eyes-Free Android Applications - https://code.google.com/p/eyes-free/ -->
+  <project path="external/eyes-free" name="platform/external/eyes-free" groups="pdk-cw-fs" />
+  <!-- Nuance Communications' speech recognition engine-->
+  <project path="external/srec" name="platform/external/srec" groups="pdk-cw-fs" /> 
+  <!-- Nuance Communications' Automated Speech Recognition (ASR), Text-to-Speech (TTS) and Speech Dialog systems -->
+  <project path="external/svox" name="platform/external/svox" groups="pdk-cw-fs" />  
+  <!-- Framework for Camera,Media Player,MTP, CPU Stats,StageFright -->
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
+  <!-- Framework for Wifi,Telephony,NFC and pretty everything else  -->
+  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" />  
+
+      
   <!-- Debugging -->
   <!-- Block IO Tracing -->
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs" />
   <!-- Can instrument CPU performance counters, tracepoints, kprobes, and uprobes (dynamic tracing). It is capable of lightweight profiling - https://perf.wiki.kernel.org/index.php/Main_Page -->
-  <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" groups="pdk-cw-fs" />  
+  <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" groups="pdk-cw-fs" />
+  <!-- A transparent low-overhead system-wide profiler - http://oprofile.sf.net/ -->
+  <project path="external/oprofile" name="platform/external/oprofile" groups="pdk-cw-fs" />  
+  <!--  a diagnostic, debugging and instructional userspace utility for Linux -->
+  <project path="external/strace" name="platform/external/strace" groups="pdk-cw-fs" />  
   
   <!-- Misc OS -->
   <!-- C/C++ and Java libraries providing Unicode and Globalization support for software applications - http://site.icu-project.org/-->
   <project path="external/icu" name="platform/external/icu" groups="pdk" />
   <!--A port of Plan 9's support library for UTF-8 and Unicode. -->
   <project path="external/libutf" name="platform/external/libutf" groups="pdk-cw-fs" />   
+  <!-- SQLite -->
+  <project path="external/sqlite" name="platform/external/sqlite" groups="pdk" />
   <!-- Java Database Connectivity for SQLite-->
   <project path="external/javasqlite" name="platform/external/javasqlite" groups="pdk-cw-fs" />
   <!-- Java implementation of ClearSilver HTML template system.-->
@@ -175,10 +247,27 @@
   <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" /> 
   <!-- LZMA compression algorithm -->   
   <project path="external/lzma" name="platform/external/lzma" groups="pdk" />
+  <!-- ZLIB compression library -->
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
+  <!-- Zopfli Compression Algorithm is a compression library programmed in C to perform very good, but slow, deflate or zlib compression -->
+  <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" />    
   <!-- The MirBSD Korn Shell - https://launchpad.net/mksh -->
   <project path="external/mksh" name="platform/external/mksh" groups="pdk" />  
-   
-
+  <!-- 2D graphic library for drawing Text, Geometries, and Images. - https://sites.google.com/site/skiadocs/home-->
+  <project path="external/skia" name="platform/external/skia" groups="pdk-cw-fs,qcom_msm8x26" /> 
+  <!-- Time zone data - http://www.iana.org/time-zones -->
+  <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" groups="pdk-cw-fs" />    
+  <!-- ZXing (pronounced "zebra crossing") is an open-source, multi-format 1D/2D barcode reader library  -->
+  <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" />  
+  <!--LLVM bitcode execution engine that compiles the bitcode to an in-memory executable -->
+  <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
+  <!-- LLVM Linker for Mobile Computing - https://code.google.com/p/mclinker/ -->
+  <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
+  <!--  Compiler for Renderscript language -->
+  <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
+    <!-- Camera Exposure Lib???-->
+  <project path="frameworks/ex" name="platform/frameworks/ex" groups="pdk-cw-fs" />
+    
   
   <!--************************************* Media libraries *************************************-->
   <!-- MPEG Advanced Audio Coding Libs -->
@@ -188,36 +277,56 @@
   <!-- OggVorbis Coding library-->
   <project path="external/libogg" name="platform/external/libogg" groups="pdk" />
   <project path="external/libvorbis" name="platform/external/libvorbis" groups="pdk-cw-fs" /> 
-  <!-- Opus audio codec -  http://www.opus-codec.org/ -->
-  <project path="external/libopus" name="platform/external/libopus" groups="pdk" />   
+  <!-- ARM optimized integer only library for doing Ogg Vorbis decompression - http://wss.co.uk/pinknoise/tremolo/ -->
+  <project path="external/tremolo" name="platform/external/tremolo" groups="pdk" />  
+  <!-- Opus audio codec - http://www.opus-codec.org/ -->
+  <project path="external/libopus" name="platform/external/libopus" groups="pdk" />
+  <!-- Speex is an Open Source/Free Software patent-free audio compression format designed for speech(Replaced by Opus) - http://www.speex.org/ -->
+  <project path="external/speex" name="platform/external/speex" groups="pdk" />  
+  <!-- Content Authoring Application for the JET Interactive MIDI Music Engine -->
+  <project path="external/sonivox" name="platform/external/sonivox" groups="pdk" />  
+  <!-- Face Recognition pattern detecion, originally written by Neven Vision -->
+  <project path="external/neven" name="platform/external/neven" groups="pdk-cw-fs" />    
   <!-- Exif Jpeg header manipulation tool - http://www.sentex.net/~mwandel/jhead/ -->
   <project path="external/jhead" name="platform/external/jhead" groups="pdk" /> 
   <!-- Library for parsing, editing, and saving EXIF data - http://libexif.sourceforge.net-->
   <project path="external/libexif" name="platform/external/libexif" groups="pdk-cw-fs" />  
+  <!-- Extensible Metadata Platform (XMP) API written in Java -->
+  <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" groups="pdk-cw-fs" />  
   <!-- YUV is a color space typically used as part of a color image pipeline.  libyuv is an open source project that includes YUV scaling and conversion functionality. - https://code.google.com/p/libyuv/ -->
-  <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv,pdk-cw-fs" />   
+  <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv,pdk-cw-fs" />  
+  <!-- Low-level pixel manipulation - http://lists.freedesktop.org/mailman/listinfo/pixman -->
+  <project path="external/pixman" name="platform/external/pixman" groups="pdk-cw-fs" />   
   <!--Independent JPEG Group's free JPEG software - http://www.ijg.org/-->  
-  <project path="external/jpeg" name="platform/external/jpeg" groups="pdk" />  
+  <project path="external/jpeg" name="platform/external/jpeg" groups="pdk" /> 
   <!-- Portable Network Graphics library - http://www.libpng.org/ -->
   <project path="external/libpng" name="platform/external/libpng" groups="pdk" />  
   <!-- Library and tools for GIF images (Not sure why "qcom_msm8x26" is in a group) -->
   <project path="external/giflib" name="platform/external/giflib" groups="pdk-cw-fs,qcom_msm8x26" />  
+  <!--WebP is an image format employing both lossy and lossless compression. https://developers.google.com/speed/webp/ -->
+  <project path="external/webp" name="platform/external/webp" groups="pdk-cw-fs,qcom_msm8x26" />    
   <!-- Glide is fast and efficient image loading library - https://github.com/bumptech/glide-->
   <project path="external/glide" name="platform/external/glide" /> 
   <!-- High Efficiency Video Coding decoder -->
   <project path="external/libhevc" name="platform/external/libhevc" />
   <!-- WebM VP8/VP9 Codec -->
-  <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />    
+  <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
   <!-- Google TV paring protocol - https://code.google.com/p/google-tv-pairing-protocol/ -->
   <project path="external/google-tv-pairing-protocol" name="platform/external/google-tv-pairing-protocol" />
   <!-- Provides a Java API for parsing MP4 files - https://github.com/sannies/mp4parser -->
   <project path="external/mp4parser" name="platform/external/mp4parser" groups="pdk-cw-fs" />
+  <!-- OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library (Camera Autofocus??) - http://opencv.org --> 
+  <project path="external/opencv" name="platform/external/opencv" groups="pdk-cw-fs" />  
+  <!-- an open-source PDF rendering engine - https://code.google.com/p/pdfium/ -->
+  <project path="external/pdfium" name="platform/external/pdfium" groups="pdk-cw-fs" />
     
   <!-- Fonts -->
   <!-- Freetype font rendering engine - http://www.freetype.org/ -->
   <project path="external/freetype" name="platform/external/freetype" groups="pdk" />
   <!-- An OpenType text shaping engine. - http://freedesktop.org/wiki/Software/HarfBuzz/ -->
-  <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" groups="pdk-cw-fs,qcom_msm8x26" />    
+  <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" groups="pdk-cw-fs,qcom_msm8x26" /> 
+  <!-- A Library for Using, Editing, and Creating SFNT-based Fonts - https://code.google.com/p/sfntly/ -->
+  <project path="external/sfntly" name="platform/external/sfntly" groups="pdk-cw-fs,qcom_msm8x26" />   
   <!-- A tool to convert OpenType and TrueType fonts to and from XML - http://sourceforge.net/projects/fonttools/ -->
   <project path="external/fonttools" name="platform/external/fonttools" />
   <!-- Coming Soon TrueType Font -->    
@@ -228,13 +337,29 @@
   <project path="external/google-fonts/carrois-gothic-sc" name="platform/external/google-fonts/carrois-gothic-sc" groups="pdk-cw-fs" />
   <!-- Cutive Mono TrueType Font --> 
   <project path="external/google-fonts/cutive-mono" name="platform/external/google-fonts/cutive-mono" groups="pdk-cw-fs" />
-  
+  <!-- NanumGothic Truetype font -->
+  <project path="external/naver-fonts" name="platform/external/naver-fonts" groups="pdk-cw-fs" />
+  <!--Noto fonts - https://code.google.com/p/noto/ -->
+  <project path="external/noto-fonts" name="platform/external/noto-fonts" groups="pdk" />
+  <!-- Minikin font (??????) -->
+  <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs" />
+   
   <!-- Telephony -->
   <!-- Google Phone Number Library -->
   <project path="external/libphonenumber" name="platform/external/libphonenumber" groups="pdk-cw-fs" />
   <!-- GSM audio transcoding -->
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" />
-
+  <!--Java implementation of Simple Initiation Protocol - https://jsip.java.net/ -->
+  <project path="external/nist-sip" name="platform/external/nist-sip" groups="pdk-cw-fs" />
+  <!-- Secure Real-time Transport Protocol  -->
+  <project path="external/srtp" name="platform/external/srtp" groups="pdk-cw-fs" />  
+  
+  
+  <!-- ************************************* Apps *******************************************-->
+  <!-- A side scrolling video game for Android -->
+  <project path="external/replicaisland" name="platform/external/replicaisland" groups="pdk-cw-fs" />
+      
+      
       
   <!-- ************************************* Devices *******************************************-->
   <!-- Shared bluetooth device library-->
@@ -266,6 +391,7 @@
   <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu" />
   <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu" clone-depth="1" />
   <project path="device/google/atv" name="device/google/atv" groups="device,fugu" />
+  
   <!-- Generic devices -->
   <!-- ARM7 processors -->
   <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="pdk" />
@@ -282,10 +408,12 @@
   <!-- X86 (bit 64)  processors -->  
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" />
   <project path="device/generic/mini-emulator-x86_64" name="device/generic/mini-emulator-x86_64" groups="pdk" />
+  
   <!-- Arduino devboard -->
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="external/arduino" name="platform/external/arduino" groups="pdk-cw-fs" />
+  
   <!-- Emulated devices -->
   <project path="device/generic/goldfish" name="device/generic/goldfish" groups="pdk" />
   <project path="device/generic/qemu" name="device/generic/qemu" />
@@ -307,6 +435,8 @@
   <project path="external/ltrace" name="platform/external/ltrace" groups="pdk-cw-fs" />  
   <!-- Debugger for Clang expression parser and LLVM disassembler - http://lldb.llvm.org/ -->
   <project path="external/lldb" name="platform/external/lldb" groups="pdk-cw-fs" />  
+  <!-- A framework for building dynamic analysis tools - http://www.valgrind.org/ -->
+  <project path="external/valgrind" name="platform/external/valgrind" groups="pdk" />  
   
   <!-- Unit testing --->
   <!--C family unit testing framework -->
@@ -323,14 +453,24 @@
   <project path="external/littlemock" name="platform/external/littlemock" groups="pdk-cw-fs" />
    <!-- Mockito mock up framework - https://code.google.com/p/mockito/ --> 
   <project path="external/mockito" name="platform/external/mockito" groups="pdk-cw-fs" /> 
-  <!-- A scriptable web server for testing HTTP clients - https://github.com/square/okhttp --> 
-  <project path="external/mockwebserver" name="platform/external/mockwebserver" groups="pdk-cw-fs" />      
-    
+  <!-- (Redundant??) A scriptable web server for testing HTTP clients - https://github.com/square/okhttp --> 
+  <project path="external/mockwebserver" name="platform/external/mockwebserver" groups="pdk-cw-fs" /> 
+  <!-- OkHttp: An HTTP+SPDY client for Android and Java applications. - https://github.com/square/okhttp -->
+  <project path="external/okhttp" name="platform/external/okhttp" groups="pdk-cw-fs" />  
+  <!-- NIST Private Key Infrastruction Test Components - http://csrc.nist.gov/groups/ST/crypto_apps_infra/pki/pkitesting.html -->
+  <project path="external/nist-pkits" name="platform/external/nist-pkits" groups="pdk-cw-fs" />    
+  <!-- An Android Testing Framework - http://ci.robolectric.org -->
+  <project path="external/robolectric" name="platform/external/robolectric" groups="pdk-cw-fs" />      
+  
   <!-- Benchmarking -->
   <!-- OpenGL and 3d benchmarking tools http://www.drawelements.com/products/deqp -->
   <project path="external/deqp" name="platform/external/deqp" />  
   <!-- Flexible testing of the Linux IO subsystem and schedulers -->
   <project path="external/fio" name="platform/external/fio" />
+  <!-- Network benchmarking tool - http://www.netperf.org/netperf/ -->
+  <project path="external/netperf" name="platform/external/netperf" groups="pdk-cw-fs" />  
+  <!-- Stressful Application Test (or stressapptest, its unix name) tries to maximize randomized traffic to memory from processor and I/O, with the intent of creating a realistic high load situation in order to test the existing hardware devices in a computer -->
+  <project path="external/stressapptest" name="platform/external/stressapptest" groups="pdk-cw-fs" />
     
   <!-- UI -->
   <!-- Automated UI testing (Similar to Selinium???) -->
@@ -349,6 +489,11 @@
   <!-- Android Studio /Idea -->
   <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
+  
+  <!-- Qemu Android emulator-->
+  <project path="external/qemu" name="platform/external/qemu" groups="pdk-cw-fs" />
+  <!-- x86 emulation in the Android emulator -->
+  <project path="external/qemu-pc-bios" name="platform/external/qemu-pc-bios" groups="pdk-cw-fs" />  
 
 
   
@@ -369,6 +514,8 @@
   <project path="developers/samples/android" name="platform/developers/samples/android" />
   <!--  sample template for device porting (?) -->  
   <project path="device/sample" name="device/sample" groups="pdk" />
+  <!-- the command line tool to create/retrieve/delete accounting objects (What is this???)  -->
+  <project path="external/nfacct" name="platform/external/nfacct" groups="pdk-cw-fs" />
   
   
   
@@ -380,12 +527,18 @@
   <project path="external/jack" name="platform/external/jack" groups="pdk-cw-fs" />
   <project path="external/libseccomp-helper" name="platform/external/libseccomp-helper" groups="pdk-cw-fs" /> 
   <project path="external/libssh2" name="platform/external/libssh2" groups="pdk-cw-fs" />
-  <project path="external/messageformat" name="platform/external/messageformat" groups="pdk-cw-fs" />  
+  <project path="external/messageformat" name="platform/external/messageformat" groups="pdk-cw-fs" /> 
+  <project path="external/pcre" name="platform/external/pcre" groups="pdk-cw-fs" />  
+  <project path="frameworks/mff" name="platform/frameworks/mff" groups="pdk-cw-fs" />
+     
   <!-- An open source, free Java implementation. Deprecated after Java 1.6-->
   <project path="external/apache-harmony" name="platform/external/apache-harmony" groups="pdk-cw-fs" /> 
+  
   <!-- dalvik related -->
   <!-- Process VM replaced by ART in Lollipop. http://en.wikipedia.org/wiki/Dalvik_%28software%29 -->
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs" />
   <!-- A Java-language API for doing compile time or runtime code generation targeting the Dalvik VM - https://code.google.com/p/dexmaker/ -->
   <project path="external/dexmaker" name="platform/external/dexmaker" groups="pdk-cw-fs" />
+  <!-- An assembler/disassembler for the dex format used by dalvik - https://code.google.com/p/smali/-->
+  <project path="external/smali" name="platform/external/smali" groups="pdk-cw-fs" />  
 </manifest>

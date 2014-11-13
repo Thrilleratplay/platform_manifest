@@ -20,6 +20,12 @@
   <project path="art" name="platform/art" groups="pdk" />
   <!-- Android build utilities -->  
   <project path="developers/build" name="platform/developers/build" /> 
+  <!-- Native development kit -->
+  <project path="ndk" name="platform/ndk" />
+  <!-- Platform Development Kit -->
+  <project path="pdk" name="platform/pdk" groups="pdk" />
+  <!-- Software development kit -->
+  <project path="sdk" name="platform/sdk" groups="pdk-cw-fs" />      
   <!-- Recovery system -->
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />   
   <!-- a derivation of the BSD's standard C library code for Android -->
@@ -106,8 +112,54 @@
   <project path="external/stlport" name="platform/external/stlport" groups="pdk" />
  <!-- VIXL: AArch64 Runtime Code Generation Library -  https://github.com/armvixl/vixl -->
   <project path="external/vixl" name="platform/external/vixl" groups="pdk" />      
-       
-       
+  <!-- Library Project including compatibility IntrumentationTestRunner for multiple dex applications -->
+  <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs" /> 
+  
+  <!-- Linux Prebuilt LLVM versions -->
+  <project path="prebuilts/clang/linux-x86/3.1" name="platform/prebuilts/clang/linux-x86/3.1" groups="pdk,linux" />
+  <project path="prebuilts/clang/linux-x86/3.2" name="platform/prebuilts/clang/linux-x86/3.2" groups="pdk,linux" />
+  <project path="prebuilts/clang/linux-x86/arm/3.3" name="platform/prebuilts/clang/linux-x86/arm/3.3" groups="arm,linux,pdk-cw-fs" />
+  <project path="prebuilts/clang/linux-x86/host/3.4" name="platform/prebuilts/clang/linux-x86/host/3.4" groups="pdk,linux" />
+  <project path="prebuilts/clang/linux-x86/host/3.5" name="platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" />
+  <project path="prebuilts/clang/linux-x86/mips/3.3" name="platform/prebuilts/clang/linux-x86/mips/3.3" groups="linux,mips,pdk-cw-fs" />
+  <project path="prebuilts/clang/linux-x86/x86/3.3" name="platform/prebuilts/clang/linux-x86/x86/3.3" groups="linux,pdk-cw-fs,x86" />
+  <!-- Linux Prebuilt GCC versions -->
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" />
+  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="pdk,linux,mips" />
+  <project path="prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/mips/mipsel-linux-android-4.8" groups="pdk,linux,mips" />
+  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.8" groups="pdk,linux,mips" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" groups="pdk,linux,x86" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="pdk,linux,x86" />
+  
+  <!-- OSX Prebuilt LLVM versions -->   
+  <project path="prebuilts/clang/darwin-x86/3.1" name="platform/prebuilts/clang/darwin-x86/3.1" groups="pdk,darwin" />
+  <project path="prebuilts/clang/darwin-x86/3.2" name="platform/prebuilts/clang/darwin-x86/3.2" groups="pdk,darwin" />
+  <project path="prebuilts/clang/darwin-x86/arm/3.3" name="platform/prebuilts/clang/darwin-x86/arm/3.3" groups="arm,darwin,pdk-cw-fs" />
+  <project path="prebuilts/clang/darwin-x86/host/3.4" name="platform/prebuilts/clang/darwin-x86/host/3.4" groups="pdk,darwin" />
+  <project path="prebuilts/clang/darwin-x86/host/3.5" name="platform/prebuilts/clang/darwin-x86/host/3.5" groups="pdk,darwin" />
+  <project path="prebuilts/clang/darwin-x86/mips/3.3" name="platform/prebuilts/clang/darwin-x86/mips/3.3" groups="darwin,mips,pdk-cw-fs" />
+  <project path="prebuilts/clang/darwin-x86/x86/3.3" name="platform/prebuilts/clang/darwin-x86/x86/3.3" groups="darwin,pdk-cw-fs,x86" />
+  <!-- OSX Prebuilt GCC versions -->
+  <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.8" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.8" groups="pdk,darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" groups="pdk,darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.8" groups="pdk,darwin,arm" />
+  <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+  <project path="prebuilts/gcc/darwin-x86/host/headers" name="platform/prebuilts/gcc/darwin-x86/host/headers" groups="pdk,darwin" />
+  <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" groups="pdk,darwin" />
+  <project path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" groups="pdk,darwin,mips" />
+  <project path="prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.8" name="platform/prebuilts/gcc/darwin-x86/mips/mipsel-linux-android-4.8" groups="pdk,darwin,mips" />
+  <project path="prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.8" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.8" groups="pdk,darwin,mips" />
+  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.8" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.8" groups="pdk,darwin,x86" />
+  <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" groups="pdk,darwin,x86" />
+    
 
   <!--************************* Android OS libraries and utilities *************************************-->
   <!-- I/O -->
@@ -165,6 +217,12 @@
   <project path="external/smack" name="platform/external/smack" groups="pdk-cw-fs" /> 
   <!-- WebRTC - http://www.webrtc.org/ -->
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" /> 
+  <!-- Wifi Service implementation -->
+  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
+  <!-- Ethernet Service implementation -->
+  <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" />   
+  <!-- Network transmission helper library-->
+  <project path="frameworks/volley" name="platform/frameworks/volley" groups="pdk-cw-fs" />  
    
   <!-- Security ->
   <!-- Encyption library http://en.wikipedia.org/wiki/Bouncy_Castle_%28cryptography%29 -->
@@ -184,12 +242,18 @@
   <!-- scrypt key derivation function - https://code.google.com/p/scrypt/ --->
   <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" /> 
   <!-- Wifi encrpytion -->
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" /> 
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" />
+  <!-- Credential management -->
+  <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
   
   <!-- Genertic Devices -->
   <!-- Bluetooth stack https://source.android.com/devices/bluetooth.html -->
   <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
-  <!-- ESound audio stream API -->
+  <!--  Support MAP and PBAP Client role on Bluedroid. -->
+  <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs" />  
+  <!-- High level Bluetooth services -->
+  <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs" />
+  <!-- ESound audio stream API --> 
   <project path="external/esd" name="platform/external/esd" groups="pdk-cw-fs" />
   <!-- a small library to interface with ALSA in the Linux kernel -->
   <project path="external/tinyalsa" name="platform/external/tinyalsa" groups="pdk" />  
@@ -215,7 +279,15 @@
   <!-- Framework for Camera,Media Player,MTP, CPU Stats,StageFright -->
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
   <!-- Framework for Wifi,Telephony,NFC and pretty everything else  -->
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" />  
+  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" /> 
+  <!-- High level NFC library -->
+  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />  
+  <!-- NFC access to NDEF content and operations on a Tag.  -->
+  <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />  
+  <!-- Make files for phones and tablets -->
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" /> 
+  <!-- Input method settings interface-->
+  <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" groups="pdk-cw-fs" />  
 
       
   <!-- Debugging -->
@@ -257,6 +329,8 @@
   <project path="external/skia" name="platform/external/skia" groups="pdk-cw-fs,qcom_msm8x26" /> 
   <!-- Time zone data - http://www.iana.org/time-zones -->
   <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" groups="pdk-cw-fs" />    
+  <!-- Timezone related functions -->
+  <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs" />  
   <!-- ZXing (pronounced "zebra crossing") is an open-source, multi-format 1D/2D barcode reader library  -->
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" />  
   <!--LLVM bitcode execution engine that compiles the bitcode to an in-memory executable -->
@@ -265,8 +339,32 @@
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <!--  Compiler for Renderscript language -->
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
-    <!-- Camera Exposure Lib???-->
+  <!-- Camera Exposure Lib???-->
   <project path="frameworks/ex" name="platform/frameworks/ex" groups="pdk-cw-fs" />
+  <!- Common calender functions and RFC 2445 iCalendar parser ->
+  <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs" />    
+  <!-- "Chips" widgets for mail app -->
+  <project path="frameworks/opt/chips" name="platform/frameworks/opt/chips" groups="pdk-cw-fs" />
+  <!-- Colorpicker component -->
+  <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" groups="pdk-cw-fs" />
+  <!-- Date and time components -->
+  <project path="frameworks/opt/datetimepicker" name="platform/frameworks/opt/datetimepicker" groups="pdk-cw-fs" />
+  <!--Emoji generator -->
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" groups="pdk-cw-fs" /> 
+  <!-- Setup wizard navbar -->
+  <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs" />  
+  <!-- vCard library (Electronic Business cards/ Contacts)--> 
+  <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs" />         
+  <!-- Renderscript library-->
+  <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
+  <!-- Layout library (??????/) -->
+  <project path="frameworks/support" name="platform/frameworks/support" groups="pdk-cw-fs" />    
+  <!-- webkit content rendering for local and Chromium content-->
+  <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs" />
+  <!-- Wraps a WebView widget within an Activity -->
+  <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />  
+  <!-- DRM client library/interface and kernel/hardware-specific device modules -->
+  <project path="hardware/intel/img/libdrm" name="platform/hardware/intel/img/libdrm" groups="intel" />
     
   
   <!--************************************* Media libraries *************************************-->
@@ -296,15 +394,21 @@
   <!-- YUV is a color space typically used as part of a color image pipeline.  libyuv is an open source project that includes YUV scaling and conversion functionality. - https://code.google.com/p/libyuv/ -->
   <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv,pdk-cw-fs" />  
   <!-- Low-level pixel manipulation - http://lists.freedesktop.org/mailman/listinfo/pixman -->
-  <project path="external/pixman" name="platform/external/pixman" groups="pdk-cw-fs" />   
+  <project path="external/pixman" name="platform/external/pixman" groups="pdk-cw-fs" />
+  <!-- Image Viewer Service implementation -->
+  <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs" />      
   <!--Independent JPEG Group's free JPEG software - http://www.ijg.org/-->  
   <project path="external/jpeg" name="platform/external/jpeg" groups="pdk" /> 
   <!-- Portable Network Graphics library - http://www.libpng.org/ -->
   <project path="external/libpng" name="platform/external/libpng" groups="pdk" />  
   <!-- Library and tools for GIF images (Not sure why "qcom_msm8x26" is in a group) -->
   <project path="external/giflib" name="platform/external/giflib" groups="pdk-cw-fs,qcom_msm8x26" />  
+  <!-- Bitmap image caching and draw library -->
+  <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" />  
   <!--WebP is an image format employing both lossy and lossless compression. https://developers.google.com/speed/webp/ -->
-  <project path="external/webp" name="platform/external/webp" groups="pdk-cw-fs,qcom_msm8x26" />    
+  <project path="external/webp" name="platform/external/webp" groups="pdk-cw-fs,qcom_msm8x26" />   
+  <!-- OpenSL ES and OpenMAX AL APIs for media processing https://www.khronos.org/openmax/-->
+  <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs" />   
   <!-- Glide is fast and efficient image loading library - https://github.com/bumptech/glide-->
   <project path="external/glide" name="platform/external/glide" /> 
   <!-- High Efficiency Video Coding decoder -->
@@ -319,6 +423,8 @@
   <project path="external/opencv" name="platform/external/opencv" groups="pdk-cw-fs" />  
   <!-- an open-source PDF rendering engine - https://code.google.com/p/pdfium/ -->
   <project path="external/pdfium" name="platform/external/pdfium" groups="pdk-cw-fs" />
+  <!-- Hardware backed video DRM -->
+  <project path="hardware/intel/img/psb_headers" name="platform/hardware/intel/img/psb_headers" groups="intel" />
     
   <!-- Fonts -->
   <!-- Freetype font rendering engine - http://www.freetype.org/ -->
@@ -349,16 +455,93 @@
   <project path="external/libphonenumber" name="platform/external/libphonenumber" groups="pdk-cw-fs" />
   <!-- GSM audio transcoding -->
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" />
-  <!--Java implementation of Simple Initiation Protocol - https://jsip.java.net/ -->
+  <!--Java implementation of Simple Initiation Protocol (SIP) - https://jsip.java.net/ -->
   <project path="external/nist-sip" name="platform/external/nist-sip" groups="pdk-cw-fs" />
+  <!-- Generic Voice Over IP framework interfacing SIP-->
+  <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs" />  
   <!-- Secure Real-time Transport Protocol  -->
   <project path="external/srtp" name="platform/external/srtp" groups="pdk-cw-fs" />  
-  
+  <!-- MMS dummy class -->
+  <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" groups="pdk-cw-fs" />  
+  <!--  access to IP Multimedia Subsystem (IMS) functionality, especially making and taking VoLTE calls using IMS -->
+  <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs" />
+  <!-- Contains classes used to manage a DataConnection -->
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+  <!-- SIM Tool Kit-->
+  <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />  
+  <!-- Voice dialer setup (voice recording) -->
+  <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
+  <!-- Voice dialer -->
+  <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />       
+  <!-- Telephony Interface -->
+  <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
+  <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
+    
   
   <!-- ************************************* Apps *******************************************-->
   <!-- A side scrolling video game for Android -->
   <project path="external/replicaisland" name="platform/external/replicaisland" groups="pdk-cw-fs" />
-      
+  <!-- SMS/MSS Messaging -->
+  <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
+  <project path="packages/apps/Mms" name="platform/packages/apps/Mms" />
+  <!-- Chromium based Broswer -->
+  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
+  <!-- Calulator -->
+  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
+  <!-- Calender -->
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
+  <!-- Camera -->
+  <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
+  <!-- Cell broadcast settings -->
+  <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
+  <!-- OpenSSL Certificate installer-->
+  <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" groups="pdk-cw-fs" />
+  <!-- Contacts -->
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
+  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
+  <!-- Clock and alarm-->
+  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
+  <!-- phone and pin keypad -->
+  <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
+  <!-- Email -->
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" />
+  <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />  
+  <!-- MS Exchange server active sync-->
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
+  <!-- Image Gallery (Not sure if one has been depricated) -->
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
+  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
+  <!-- In Call UI-->
+  <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" />
+  <!-- AOSP Launcher version 3 -->  
+  <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" />
+  <!-- New functionality for running apps within an enterprise environment (User scope). https://developer.android.com/about/versions/android-5.0.html-->
+  <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" />
+  <!-- Music player-->
+  <project path="packages/apps/Music" name="platform/packages/apps/Music" />
+  <!-- Audio equalizer -->
+  <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
+  <!-- Open Mobile Alliance (OMA) Device Management (DM) standardized provisioning, updates and fault management - http://technical.openmobilealliance.org/Technical/technical-information/release-program/current-releases -->
+  <project path="packages/apps/OMA-DM" name="platform/packages/apps/OMA-DM" />
+  <!-- New device setup -->
+  <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
+  <!-- APK installer -->
+  <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
+  <!-- Mister Widget appears on your home screen to provide helpful tips -->
+  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
+  <!-- Minimal configuration/provisioning app-->
+  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
+  <!-- Device Search  Functionality-->
+  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
+  <!-- Device settings -->
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <!-- Sound recorder -->
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
+  <!-- Additonal settings -->
+  <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
+  <!-- Google TV settings -->
+  <project path="packages/apps/TvSettings" name="platform/packages/apps/TvSettings" />
+     
       
       
   <!-- ************************************* Devices *******************************************-->
@@ -391,6 +574,8 @@
   <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu" />
   <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu" clone-depth="1" />
   <project path="device/google/atv" name="device/google/atv" groups="device,fugu" />
+  <!-- Samsung exynos5 devices (Galaxy S4, Galaxy S5, Galaxy Note 3, Samsung Chromebook)-->
+  <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" groups="exynos5" />  
   
   <!-- Generic devices -->
   <!-- ARM7 processors -->
@@ -418,6 +603,72 @@
   <project path="device/generic/goldfish" name="device/generic/goldfish" groups="pdk" />
   <project path="device/generic/qemu" name="device/generic/qemu" />
   
+  <!-- Hardware media encoding/decoding -->
+  <!-- Intel Moorestown mix video encoder/decoder library-->
+  <project path="hardware/intel/common/libmix" name="platform/hardware/intel/common/libmix" groups="intel" />
+  <!-- Intel Moorestown specific wrs-omx-il (Userspace OpenMax Implementation Layer)components -->
+  <project path="hardware/intel/common/wrs_omxil_core" name="platform/hardware/intel/common/wrs_omxil_core" groups="intel" />
+  <project path="hardware/intel/common/omx-components" name="platform/hardware/intel/common/omx-components" groups="intel" />  
+  <!-- mrst/mfld gfx video drivers for X11 -->  
+  <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" />    
+  <!-- Openmax userspace implementation library -->
+  <project path="hardware/intel/common/libstagefrighthw" name="platform/hardware/intel/common/libstagefrighthw" groups="intel" /> 
+  <!-- Video Acceleration (VA) API -->
+  <project path="hardware/intel/common/libva" name="platform/hardware/intel/common/libva" groups="intel" /> 
+  <!-- GPU User space buffer manager -->
+  <project path="hardware/intel/common/libwsbm" name="platform/hardware/intel/common/libwsbm" groups="intel" /> 
+  <!-- The hardware abstraction for the display subsystem - https://source.android.com/devices/graphics.html#hardware_composer-->
+  <project path="hardware/intel/img/hwcomposer" name="platform/hardware/intel/img/hwcomposer" groups="intel" /> 
+  
+  <!-- Qualcomm -->   
+  <!-- a Qualcomm audio HAL implementation -->
+  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio" />
+  <!-- Qualcomm Bluetooth-->
+  <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
+  <!-- GPU driver for Qualcomm msm8084, msm8226, msm8960, msm8974 -->
+  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom,qcom_display" />
+  <!-- Qualcomm GPS -->
+  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps" />
+  <!-- Qualcomm Keymaster hardware-backed credential storage-->
+  <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />   
+  <!-- Qualcomm video decoding -->
+  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
+  <!-- Qualcomm Snapdragon 800 series systems on a chip -->
+  <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
+  <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" groups="qcom_msm8x26" />
+  <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" groups="qcom_msm8x27" />
+  <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" />
+  <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" groups="qcom_msm8x84" />  
+  <!-- Power HAL-->
+  <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
+  <!--Qualcomm Wifi -->
+  <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
+  <!-- Radio_Interface_Layer -->
+  <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />   
+  
+  <!-- Texas Instrument Open Multimedia Applications Platform image/video System on a chip -->
+  <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" groups="omap3" />
+  <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" />
+  <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" /> 
+      
+  <!-- Device Firmware -->
+  <!-- hardware abstraction library (HAL) -->
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" /> 
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />   
+  <!-- Bootstub to create NAND boot image for Intel Moorestown and Intel Medfield platfroms-->
+  <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" groups="intel" />     
+  <!-- Broadcom Bluetooth firmware -->
+  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
+  <!-- Broadcom Wifi fireware -->
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
+  <!-- Intel audio through HDMI (Tiny Audio) -->
+  <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" />  
+  <!-- AK8975 3-axis electronic compass - http://www.akm.com/akm/en/product/datasheet1/?partno=AK8975 -->
+  <project path="hardware/akm" name="platform/hardware/akm" />  
+  <!-- Device tempeture sensor -->
+  <project path="hardware/intel/common/utils" name="platform/hardware/intel/common/utils" groups="intel" />  
+  <!-- Invensense 6-axis gyroscopic motion sensors http://www.invensense.com/mems/gyro/sixaxis.html -->
+  <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />  
   
   
   <!-- ************************************* Development ************************************* -->
@@ -477,6 +728,8 @@
   <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs" />
   <!-- Mock up creation - http://easymock.org/ -->
   <project path="external/easymock" name="platform/external/easymock" groups="pdk-cw-fs,tradefed" /> 
+  <!-- UI testing framework-->
+  <project path="frameworks/testing" name="platform/frameworks/testing" groups="pdk-cw-fs" /> 
 
   <!-- Eclipse Development -->
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" groups="pdk-cw-fs" />
@@ -505,7 +758,16 @@
   <project path="external/jdiff" name="platform/external/jdiff" groups="pdk-cw-fs" />  
   <!-- Python Markdown -  http://freewisdom.org/projects/python-markdown-->
   <project path="external/markdown" name="platform/external/markdown" groups="pdk-cw-fs" />  
-  
+ 
+  <!-- ************************************* Wallpaper *************************************-->  
+  <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
+  <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" />
+  <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" />
+  <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" />
+  <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" />
+  <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" />
+  <project path="packages/wallpapers/NoiseField" name="platform/packages/wallpapers/NoiseField" />
+  <project path="packages/wallpapers/PhaseBeam" name="platform/packages/wallpapers/PhaseBeam" />  
   
   <!-- ************************************* Misc. *************************************-->
   <!-- Android app demo code.  Not needed--> 
@@ -516,6 +778,8 @@
   <project path="device/sample" name="device/sample" groups="pdk" />
   <!-- the command line tool to create/retrieve/delete accounting objects (What is this???)  -->
   <project path="external/nfacct" name="platform/external/nfacct" groups="pdk-cw-fs" />
+  <!-- VM-agnostic native functions that implement methods for system class libraries-->
+  <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />  
   
   
   
@@ -530,9 +794,22 @@
   <project path="external/messageformat" name="platform/external/messageformat" groups="pdk-cw-fs" /> 
   <project path="external/pcre" name="platform/external/pcre" groups="pdk-cw-fs" />  
   <project path="frameworks/mff" name="platform/frameworks/mff" groups="pdk-cw-fs" />
-     
+  <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" groups="pdk-cw-fs" />  
+  <project path="frameworks/opt/inputconnectioncommon" name="platform/frameworks/opt/inputconnectioncommon" />
+  <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs" />
+  <project path="hardware/intel/common/bd_prov" name="platform/hardware/intel/common/bd_prov" groups="intel" />  
+  <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
+  <project path="hardware/nvidia/tegra124" name="platform/hardware/nvidia/tegra124" groups="tegra124" />  
+  <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />    
+  <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
+       
   <!-- An open source, free Java implementation. Deprecated after Java 1.6-->
   <project path="external/apache-harmony" name="platform/external/apache-harmony" groups="pdk-cw-fs" /> 
+  <!-- Depricated Camera -->
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
+  <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />  
+  <!-- AOSP Launcher version 2 (Depricated??)-->
+  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" />
   
   <!-- dalvik related -->
   <!-- Process VM replaced by ART in Lollipop. http://en.wikipedia.org/wiki/Dalvik_%28software%29 -->
